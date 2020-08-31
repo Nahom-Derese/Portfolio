@@ -1,0 +1,38 @@
+@import './mixins';
+
+.main-container {
+
+    .nav-container {
+        @include centerIt();
+        min-height: 8vh;
+        position: relative;
+        top: 25px;
+        @include Flex();
+        justify-content: space-between;
+
+        .logo {
+            .Logo-svg {
+                width: 75%;
+                height: auto;
+            }
+        }
+
+        .Navigations {
+            ul {
+                @include Flex();
+                width: 60vh;
+
+                a {
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 18px;
+                    letter-spacing: 4%;
+                }
+
+                #active-now {
+                    border-bottom: 2px solid #1F90B4;
+                }
+
+            }
+        }
+    }
+}

@@ -1,0 +1,106 @@
+@import './mixins';
+
+.main-container {
+
+    .Bg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100vw;
+        height: auto;
+    }
+
+    .N {
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        transform: translate(-45%, -20%);
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .container-center {
+        @include testBorder();
+        @include centerIt();
+        margin-top: 5vh;
+        height: 70vh;
+        @include Flex();
+
+        .hero-container {
+            @include testBorder();
+            transform: scale(0.9);
+            @include Flex();
+            justify-content: center;
+            flex-direction: column;
+
+            img {
+                transform: scale(0.7);
+            }
+
+            h2 {
+                color: rgb(105, 105, 105);
+                font-family: 'Lobster', sans-serif;
+                position: relative;
+                top: -50px;
+                border-bottom: 1px solid black;
+                padding-bottom: 9px;
+            }
+
+            h6 {
+                color: rgb(109, 109, 109);
+                font-family: 'Poppins', sans-serif;
+                font-style: italic;
+                position: relative;
+                top: -66px;
+            }
+
+            .mine {
+                border-radius: 10px;
+                border: 1px solid teal;
+                position: relative;
+                top: -40px;
+                background: rgba(28, 11, 104, 0.5);
+            }
+        }
+
+        .content-container {
+            @include testBorder();
+            margin-top: 5vh;
+            width: 40vw;
+
+            h1 {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .footer {
+        @include Flex();
+        flex-direction: column;
+        @include testBorder();
+        @include centerIt();
+        margin-top: 3vh;
+
+        .social-container {
+            width: 100%;
+            @include testBorder();
+            display: flex;
+            justify-content: flex-end;
+
+            .social-icons {
+                @include Flex();
+                @include testBorder();
+                transform: scale(0.7);
+                width: 160px;
+
+            }
+
+        }
+
+        .Down-Arrow {
+            margin-top: 1.2vh;
+            transform: scale(0.65);
+        }
+    }
+}

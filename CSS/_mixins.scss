@@ -1,0 +1,14 @@
+@mixin Flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin centerIt {
+    width: 85%;
+    margin: auto;
+}
+
+@mixin testBorder {
+    // border: 1px solid black;
+}

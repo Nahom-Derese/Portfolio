@@ -1,0 +1,20 @@
+@import './nav';
+@import './main-body';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.main-container {
+    height: 100vh;
+    background: url('../Assets/Radial\ Shadow.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
