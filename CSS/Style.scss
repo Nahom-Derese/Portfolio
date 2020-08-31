@@ -1,5 +1,6 @@
 @import './nav';
 @import './main-body';
+@import './page-Transitioin';
 
 * {
     margin: 0;
@@ -14,7 +15,9 @@ body {
 
 .main-container {
     height: 100vh;
-    background: url('../Assets/Radial\ Shadow.svg');
+    background: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.454)), url('../Assets/pexels-kaboompics-com-5836.jpg');
+    background-blend-mode: hard-light;
     background-size: cover;
+    background-position: right;
     background-repeat: no-repeat;
 }

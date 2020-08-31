@@ -1,38 +1,87 @@
 @import './mixins';
 
 .main-container {
+    .nav-bar {
+        background: rgba(0, 0, 0, .09);
+        box-shadow: $boxshadow;
+        max-height: 7vh;
+        position: sticky;
+        top: 0;
+        transition: all 600ms ease-out;
 
-    .nav-container {
-        @include centerIt();
-        min-height: 8vh;
-        position: relative;
-        top: 25px;
-        @include Flex();
-        justify-content: space-between;
+        .nav-container {
+            @include centerIt();
+            min-height: 7vh;
+            @include Flex();
+            justify-content: space-between;
+            z-index: 1;
 
-        .logo {
-            .Logo-svg {
-                width: 75%;
-                height: auto;
+            .logo {
+                .Logo-svg {
+                    margin-top: 5px;
+                    width: 68%;
+                    height: auto;
+                    filter: invert(1);
+                    transition: all 600ms ease-out;
+                }
             }
-        }
 
-        .Navigations {
-            ul {
+            .nav-links {
                 @include Flex();
-                width: 60vh;
+                width: 35vw;
 
-                a {
-                    font-family: 'Montserrat', sans-serif;
-                    font-size: 18px;
-                    letter-spacing: 4%;
+                #social {
+                    display: none;
+
+                    .social-icons {
+                        transform: scale(.6);
+                    }
+                }
+
+                li {
+                    list-style: none;
+
+                    a {
+                        color: rgb(230, 182, 232);
+                        text-decoration: none;
+                        font-family: 'Montserrat', sans-serif;
+                        font-size: 16px;
+                        letter-spacing: 4%;
+                        transition: all 600ms ease-out;
+                    }
                 }
 
                 #active-now {
-                    border-bottom: 2px solid #1F90B4;
+                    border-bottom: 2px solid rgb(230, 182, 232);
                 }
 
             }
+
+            .burger {
+                display: none;
+
+                div {
+                    width: 20px;
+                    height: 3px;
+                    background-color: rgb(7, 5, 75);
+                    margin: 5px;
+                    transition: all 300ms ease-in 10ms;
+                }
+            }
         }
     }
+}
+
+.scrolling-active {
+    background: rgba(234, 255, 160, 0.281) !important;
+    max-height: 7 !important;
+
+}
+
+
+.scrolling-active-link {
+    z-index: 10;
+    color: black !important;
+    border-color: black !important;
+    filter: invert(0) !important;
 }

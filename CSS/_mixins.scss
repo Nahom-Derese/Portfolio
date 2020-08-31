@@ -12,3 +12,51 @@
 @mixin testBorder {
     // border: 1px solid black;
 }
+
+@mixin scaleUp {
+    transform: scale(1.5);
+    font-size: large;
+}
+
+
+//------------------------- Burger Imported -------------------------//
+
+
+@mixin TextGradient($fromColor, $toColor) {
+    background: linear-gradient(to right, $fromColor, $toColor);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin burgerAnimation($rotate, $TX, $TY) {
+    transform: rotate($rotate) translate($TX, $TY);
+}
+
+@mixin navlinks {
+    @include FlexStuff(space-around, center);
+    width: 33vw;
+}
+
+@mixin navlinksA {
+    text-decoration: none;
+    color: $ItemText;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+@mixin burgerDiv {
+    width: 20px;
+    height: 3px;
+    background-color: rgb(7, 5, 75);
+    margin: 5px;
+    transition: all 300ms ease-in 10ms;
+}
+
+$boxshadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.25);
+$ItemText: rgb(36, 36, 36);
+$button: rgba(9, 48, 109, 0.671);
+$button-hover: rgba(9, 38, 85, 0.884);
+$button-outline: rgba(212, 212, 212, 0.623);
+$button-outline-hover: rgb(202, 202, 202);
+$LinearGradient: linear-gradient(to bottom left, rgba(0, 0, 0, 0.192), rgba(99, 105, 8, 0.281), rgba(0, 0, 0, 0.226));
+$Linear-Gradient: linear-gradient(to right rgba(65, 123, 223, 0.677), rgba(37, 75, 139, 0.707), rgba(37, 75, 139, 0.707));
